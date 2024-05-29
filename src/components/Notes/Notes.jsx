@@ -21,6 +21,7 @@ const Notes = () => {
          <div className="flex flex-row gap-3 flex-wrap m-2">
          
            {  
+           // eslint-disable-next-line
             data?.length>0?data.filter((item,i) => { if(item.pinned===true && !item.isArchive && !item.del) return item }).map((item,i)=>{
                return <><Pin key={item.id} title={item.title} note={item.note} pinned={Pinned} id={item.id} archive={item.isArchive} del={item.del} isArchive={Archive} Del={Delete}/></>
             }):<></>   
@@ -31,6 +32,7 @@ const Notes = () => {
          <div className="flex flex-row gap-2 flex-wrap m-2">
           
            {  
+           // eslint-disable-next-line
              data?.length>0?data.filter((item,i) => { if(item.pinned===false && !item.isArchive && !item.del) return item }).map((item,i)=>{
                return <><Pin key={item.id} title={item.title} note={item.note} pinned={Pinned} id={item.id} archive={item.isArchive} isArchive={Archive} del={item.del} Del={Delete}/></>
             }):<></>   

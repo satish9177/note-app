@@ -76,7 +76,7 @@ const intial={
 }
 
 const ContextProvider = ({children}) => {
-  const [{title,note,data,del,pinned,isArchive},dispatch] = useReducer(Reducerfun,intial);
+  const [{title,note,data},dispatch] = useReducer(Reducerfun,intial);
   
 const Add=()=>{
   dispatch({

@@ -6,8 +6,8 @@ const Bin = () => {
     <> 
     <div className='flex flex-wrap mt-28 ml-48 gap-3'>
      { 
-      
-     data?.length>0?data.filter((item,i) => { if(item.del) return item }).map((item,i)=>{
+      // eslint-disable-next-line
+     data?.length>0?data.filter((item,i) =>{ if(item.del) return item }).map((item,i)=>{
       return <Pin key={item.id} title={item.title} note={item.note} pinned={Pinned} id={item.id} archive={item.isArchive} isArchive={Archive} del={item.del} Del={Delete}/>
    }): <div>
       nothing in Bin
